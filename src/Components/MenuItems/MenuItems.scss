@@ -1,0 +1,47 @@
+@import "../Global.scss";
+
+.menu-items {
+  grid-area: 2/2/3/3;
+  margin-top: 5vw;
+  display: grid;
+
+  .menu-item {
+    display: grid;
+    grid-template-columns: repeat(max-content);
+    margin-bottom: 3vw;
+    animation: slide 1s;
+
+    .title,
+    .price {
+      font-family: $heading-font;
+      color: $heading-color;
+      font-size: 1.5vw;
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+
+    .price {
+      justify-self: end;
+    }
+
+    .description {
+      width: 30vw;
+      font-family: $text-font;
+      font-size: 0.9vw;
+      font-weight: 400;
+      line-height: 30px;
+      margin-top: 1.2vw;
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

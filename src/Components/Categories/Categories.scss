@@ -1,0 +1,51 @@
+@import "../Global.scss";
+
+.categories {
+  margin-top: 5vw;
+  grid-area: 2/1/3/2;
+  width: 10.625vw;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-auto-rows: max-content;
+
+  text-align: right;
+  align-items: center;
+  padding-bottom: 1.5vw;
+  cursor: pointer;
+
+  .category-line {
+    height: 4px;
+    background-color: $heading-color;
+    width: 100%;
+    animation: reveal 0.4s;
+  }
+
+  @keyframes reveal {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  p {
+    font-family: $text-font;
+    font-weight: 700;
+    font-size: 1vw;
+    letter-spacing: 0.1125vw;
+    margin-left: 20px;
+    color: $secondary-color;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .category-hover,
+  .category-clicked {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s;
+  }
+}

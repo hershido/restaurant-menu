@@ -1,0 +1,23 @@
+@import "../Global.scss";
+
+.menu {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 10vw;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  // margin-top: 400px;
+
+  .heading-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    h1 {
+      color: $heading-color;
+      font-family: $heading-font;
+      font-size: 2.75vw;
+    }
+  }
+}
